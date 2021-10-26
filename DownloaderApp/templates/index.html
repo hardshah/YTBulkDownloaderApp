@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset ="utf-8">
+    <meta name = "viewport" content ="width=device-width, initial-scale=1">
+
+    <title> Youtube to Mp3 files in bulk</title>
+
+    <link rel="stylesheet" href = "{{url_for('static' ,filename = './css/bootstrap.min (3).css')}}"/>
+    <link rel="stylesheet" href = "{{url_for('static' ,filename = './css/_bootswatch (2).scss')}}"/>
+  </head>
+  <body>
+
+{% block main %}
+
+<div align = "center" class="container">
+  <div class="row">
+    <div class="col"><br>
+
+      <h1 align="center">Youtube Audio Downloader</h1>
+      <p align="center">
+This conversion tool allows you to download mp3 files from Youtube in bulk. Simply make a text file with names of songs you want to download, each seperated by line. It will perform a search on Youtube to find the top search result, and download using PyTube. It will return a zip file with your songs inside as mp3 format.
+</p>
+      <hr>
+
+      <form action="/" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="text"  id="text">
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </div>
+        </div><br>
+
+        
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+<h5 align="center"> ONLY UPLOAD TEXT FILES</h5><br>
+<h5 align = "center"> They should have the extension .txt and each line should contain one song name</h5><br>
+<h5 align = "center"> SONGS WITH NON-ALPHANUMERIC CHARACTERS WILL NOT WORK </h5>
+
+
+  </body>
+ 
+</html>
