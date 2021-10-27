@@ -4,7 +4,7 @@ Simply make a text file with names of songs you want to download, each seperated
 It will perform a search on Youtube to find the top search result, and download it using PyTube
 It will return a zip file that contains all mp3 files that were requested
 
-#Project Design
+# Project Design
 
 All html templates are located in the templates folder. All CSS is located in the static folder. Inside the main folder lies the routes.py file.
 The routes.py contains the endpoint logic.
